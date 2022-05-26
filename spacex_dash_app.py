@@ -82,7 +82,7 @@ def get_scatter_chart(entered_site, payload_range):
       
     
     else:
-        df_select=df_slide[df_slide['Launch Site'] == entered_site]  #Why can't we use df_slide['Launch Site']? Double check with dataframe.
+        df_select=df_slide[df_slide['Launch Site'] == entered_site]
         fig=px.scatter(df_select,x='Payload Mass (kg)', y='class', color='Booster Version Category',
         title='Success by Payloads and Booster Versions for Selected Site')
         success_rate=print((df_slide[df_slide['Class']==1].shape[0])/df_slide.shape[0])
